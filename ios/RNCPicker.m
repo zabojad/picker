@@ -118,9 +118,10 @@ numberOfRowsInComponent:(__unused NSInteger)component
   label.accessibilityIdentifier = _items[row][@"testID"];
     
   label.numberOfLines = _numberOfLines;
+  label.lineBreakMode = NSLineBreakByClipping; // FIXME expose a ellipsizeMode
 
-  label.leftInset = 20.0;
-  label.rightInset = 20.0;
+  label.leftInset = 0;  // was initially 20.0 but caused UI issues
+  label.rightInset = 0;  // was initially 20.0 but caused UI issues
   
   return view;
 }

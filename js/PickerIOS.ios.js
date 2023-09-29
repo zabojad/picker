@@ -112,7 +112,7 @@ class PickerIOS extends React.Component<Props, State> {
           items={this.state.items}
           selectedIndex={this.state.selectedIndex}
           onChange={this._onChange}
-          numberOfLines={numberOfLines}
+          numberOfLines={this.props.numberOfLines}
         />
       </View>
     );
